@@ -1,9 +1,8 @@
 <template>
-  <div class="flex justify-between">
+  <div class=""></div>
+  <form @submit.prevent="">
     <h1 class="text-2xl font-semibold mb-4 content-center">Inciar Sesion</h1>
     <img src="@/assets/login/uanl-logo-v-color.png" class="img w-10 z-10" />
-  </div>
-  <form @submit.prevent="">
     <!-- email Input -->
     <div class="mb-4">
       <fieldset class="fieldset">
