@@ -1,5 +1,6 @@
 import { authRoutes } from '@/modules/auth/routes';
 import BancoRevisor from '@/modules/BancoAdmin/layout/BancoRevisor.vue';
+import BancosElaborador from '@/modules/BancoElaborador/layout/BancosElaborador.vue';
 import BancoLayout from '@/modules/Bancos/layout/BancoLayout.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
@@ -9,12 +10,12 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      redirect: { name: 'bancosAdmin' },
+      redirect: { name: 'Administrador' },
       component: BancoLayout,
       children: [
         {
-          path: 'bancosAdmin',
-          name: 'bancosAdmin',
+          path: 'Administrador',
+          name: 'Administrador',
           component: () => import('@/modules/Bancos/views/BancosLiistView.vue'),
           children: [
             {
@@ -28,6 +29,11 @@ const router = createRouter({
           path: '/Revisor',
           name: 'Revisor',
           component: BancoRevisor,
+        },
+        {
+          path: '/Elaborador',
+          name: 'Elaborador',
+          component: BancosElaborador,
         },
       ],
     },

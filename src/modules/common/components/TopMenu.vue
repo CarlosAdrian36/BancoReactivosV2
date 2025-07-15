@@ -23,13 +23,13 @@
           class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
         >
           <li>
-            <router-link to="Adminos">Banco Administardor</router-link>
+            <router-link to="Administrador">Banco Administardor</router-link>
           </li>
           <li>
             <router-link to="Revisor"> Bancos Revisor</router-link>
           </li>
           <li>
-            <!-- <router-link to="Elaborador"></router-link> -->
+            <router-link to="Elaborador"> Banco Elaborador</router-link>
           </li>
         </ul>
       </div>
