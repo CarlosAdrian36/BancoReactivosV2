@@ -3,9 +3,9 @@ import TopMenu from '@/modules/common/components/TopMenu.vue';
 </script>
 
 <template>
-  <div class="flex flex-col">
+  <div class="">
     <TopMenu />
-    <main class="flex flex-row">
+    <main class="">
       <router-view />
     </main>
   </div>

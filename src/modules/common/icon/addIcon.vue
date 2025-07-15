@@ -3,10 +3,10 @@
     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
     <g id="SVGRepo_iconCarrier">
-      <g id="Menu / Close_SM">
+      <g id="Edit / Add_Plus">
         <path
           id="Vector"
-          d="M16 16L12 12M12 12L8 8M12 12L16 8M12 12L8 16"
+          d="M6 12H12M12 12H18M12 12V18M12 12V6"
           stroke="currentColor"
           stroke-width="2"
           stroke-linecap="round"

@@ -35,7 +35,7 @@
     </div>
     <div class="navbar-end">
       <label class="toggle text-base-content">
-        <input type="checkbox" value="synthwave" class="theme-controller" />
+        <input type="checkbox" value="dark" class="theme-controller" />
 
         <svg aria-label="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <g
