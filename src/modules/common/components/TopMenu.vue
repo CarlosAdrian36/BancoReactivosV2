@@ -26,7 +26,7 @@
             <router-link to="Administrador">Banco Administardor</router-link>
           </li>
           <li>
-            <router-link to="Revisor"> Bancos Revisor</router-link>
+            <router-link to="/Revisor"> Bancos Revisor</router-link>
           </li>
           <li>
             <router-link to="Elaborador"> Banco Elaborador</router-link>

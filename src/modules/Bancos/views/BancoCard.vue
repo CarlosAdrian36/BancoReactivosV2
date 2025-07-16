@@ -12,9 +12,7 @@ defineProps<Props>();
 <template class="">
   <div class="card bg-base-200 card-sm shadow-sm">
     <div class="card-body">
-      <h2 class="card-title">
-        {{ banco.titulo }}
-      </h2>
+      <h2 class="card-title">{{ banco.titulo }}</h2>
       <!-- <p>
         A card component has a figure, a body part, and inside body there are title and actions
         parts

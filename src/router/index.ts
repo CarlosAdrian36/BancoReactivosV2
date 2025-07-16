@@ -18,13 +18,19 @@ const router = createRouter({
           path: 'Administrador',
           name: 'Administrador',
           component: () => import('@/modules/Bancos/views/BancosLiistView.vue'),
-          children: [
-            {
-              path: 'bancos/card',
-              name: 'card',
-              component: () => import('@/modules/Bancos/views/BancoCard.vue'),
-            },
-          ],
+          // children: [
+          //   {
+          //     path: 'bancos/card',
+          //     name: 'card',
+          //     component: () => import('@/modules/Bancos/views/BancoCard.vue'),
+          //   },
+          // ],
+        },
+        {
+          path: 'Administrado/:bancoId',
+          name: 'Administrado',
+          // props: true,
+          component: () => import('@/modules/Bancos/views/bancoDetalle.vue'),
         },
         {
           path: '/Revisor',

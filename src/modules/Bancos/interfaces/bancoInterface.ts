@@ -1,5 +1,5 @@
 export interface BancoReactivo {
-  bancoId: number;
+  bancoId: string;
   titulo: string;
   descripcion: string;
   esCompartido: boolean;

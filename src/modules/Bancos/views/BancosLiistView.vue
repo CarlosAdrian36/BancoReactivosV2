@@ -2,7 +2,21 @@
   <div
     class="mx-auto grid max-w-2xl grid-cols-1 gap-5 p-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1"
   >
-    <BancoCard v-for="banco in data" :key="banco.bancoId" :banco="banco" />
+    <div v-for="banco in bancosStore.bancoList" :key="banco.bancoId" class="hover">
+      <RouterLink :to="`/Administrado/${banco.bancoId}`">
+        <div class="card bg-base-200 card-sm shadow-sm">
+          <div class="card-body">
+            <h2 class="card-title">{{ banco.titulo }}</h2>
+            <p>{{ banco.esCompartido }}</p>
+            <div class="justify-end card-actions">
+              <button class="btn btn-circle btn-sm">
+                <DeleteIcon />
+              </button>
+            </div>
+          </div>
+        </div>
+      </RouterLink>
+    </div>
   </div>
 
   <!-- Modal Customizable con su boton -->
@@ -34,7 +48,7 @@
     descripcion=""
     :open="modalOpen"
     @close="modalOpen = false"
-    @value="onNewValue"
+    @value="bancosStore.addBanco"
   />
 
   <FabButton @click="modalOpen = true">
@@ -44,40 +58,17 @@
 
 <script setup lang="ts">
 import FabButton from '@/modules/common/components/fabButton.vue';
-import BancoCard from './BancoCard.vue';
 import AddIcon from '@/modules/common/icon/addIcon.vue';
 import InputModal from '@/modules/common/components/InputModal.vue';
 import { ref } from 'vue';
 import CustomModal from '@/modules/common/components/CustomModal.vue';
 import DeleteIcon from '@/modules/common/icon/deleteIcon.vue';
 import { useBancoStore } from '@/modules/BancoElaborador/store/banco.store';
-import type { BancoReactivo } from '../interfaces/bancoInterface';
-import { useQuery } from '@tanstack/vue-query';
-import { fetchBancos } from '@/api/BancoApi';
+import { RouterLink } from 'vue-router';
 
-const { data } = useQuery({
-  queryKey: ['bancos'],
-  queryFn: () => fetchBancos(),
-});
-
-interface Props {
-  bancos: BancoReactivo[];
-}
-
-defineProps<Props>();
 const modalOpen = ref(false);
 
 const CustomModalOpen = ref(false);
+
 const bancosStore = useBancoStore();
-
-const onNewValue = (bancoName: string) => {
-  console.log({ bancoName });
-
-  bancosStore.bancoList.push({
-    bancoId: 1,
-    titulo: 'asdcasd',
-    descripcion: 'asdasdasd',
-    esCompartido: false,
-  });
-};
 </script>
