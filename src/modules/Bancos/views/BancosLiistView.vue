@@ -2,7 +2,7 @@
   <div
     class="mx-auto grid max-w-2xl grid-cols-1 gap-5 p-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1"
   >
-    <BancoCard />
+    <BancoCard v-for="banco in data" :key="banco.bancoId" :banco="banco" />
   </div>
 
   <!-- Modal Customizable con su boton -->
@@ -50,12 +50,34 @@ import InputModal from '@/modules/common/components/InputModal.vue';
 import { ref } from 'vue';
 import CustomModal from '@/modules/common/components/CustomModal.vue';
 import DeleteIcon from '@/modules/common/icon/deleteIcon.vue';
+import { useBancoStore } from '@/modules/BancoElaborador/store/banco.store';
+import type { BancoReactivo } from '../interfaces/bancoInterface';
+import { useQuery } from '@tanstack/vue-query';
+import { fetchBancos } from '@/api/BancoApi';
 
+const { data } = useQuery({
+  queryKey: ['bancos'],
+  queryFn: () => fetchBancos(),
+});
+
+interface Props {
+  bancos: BancoReactivo[];
+}
+
+defineProps<Props>();
 const modalOpen = ref(false);
 
 const CustomModalOpen = ref(false);
+const bancosStore = useBancoStore();
 
 const onNewValue = (bancoName: string) => {
   console.log({ bancoName });
+
+  bancosStore.bancoList.push({
+    bancoId: 1,
+    titulo: 'asdcasd',
+    descripcion: 'asdasdasd',
+    esCompartido: false,
+  });
 };
 </script>

@@ -1,6 +1,7 @@
 import { authRoutes } from '@/modules/auth/routes';
 import BancoRevisor from '@/modules/BancoAdmin/layout/BancoRevisor.vue';
-import BancosElaborador from '@/modules/BancoElaborador/layout/BancosElaborador.vue';
+import ElaboradorList from '@/modules/BancoElaborador/views/elaboradorList.vue';
+// import BancosElaborador from '@/modules/BancoElaborador/layout/BancosElaborador.vue';
 import BancoLayout from '@/modules/Bancos/layout/BancoLayout.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
@@ -33,7 +34,7 @@ const router = createRouter({
         {
           path: '/Elaborador',
           name: 'Elaborador',
-          component: BancosElaborador,
+          component: ElaboradorList,
         },
       ],
     },
