@@ -1,21 +1,7 @@
 <template>
-  <svg
-    width="145px"
-    height="145px"
-    viewBox="-7.44 -7.44 38.88 38.88"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-    <g id="SVGRepo_iconCarrier">
-      <path
-        d="M18 10L21 7L17 3L14 6M18 10L8 20H4V16L14 6M18 10L14 6"
-        stroke="currentColor"
-        stroke-width="0.4800000000000001"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      ></path>
-    </g>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+    <path
+      d="m2.695 14.762-1.262 3.155a.5.5 0 0 0 .65.65l3.155-1.262a4 4 0 0 0 1.343-.886L17.5 5.501a2.121 2.121 0 0 0-3-3L3.58 13.419a4 4 0 0 0-.885 1.343Z"
+    />
   </svg>
 </template>

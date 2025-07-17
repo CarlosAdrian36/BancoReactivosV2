@@ -1,5 +1,7 @@
 <template>
   <p class="underline underline-offset-4">Etapa + Nivel Cognitivo + Clasificación. ????</p>
+
+  <BreadCrumbs />
   <div class="">
     <table class="table">
       <!-- head -->
@@ -128,4 +130,26 @@
       </tbody>
     </table>
   </div>
+
+  <!-- Modal con titulo y descripcion -->
+  <InputModal
+    placeholder="Ingrese el Nuevo reactivo"
+    Titulo="Nuevo Banco"
+    descripcion=""
+    :open="modalOpen"
+    @close="modalOpen = false"
+  />
+  <!-- @value="bancosStore.addBanco" -->
+
+  <FabButton @click="modalOpen = true">
+    <AddIcon />
+  </FabButton>
 </template>
+<script setup lang="ts">
+import BreadCrumbs from '@/modules/common/components/BreadCrumbs.vue';
+import FabButton from '@/modules/common/components/fabButton.vue';
+import InputModal from '@/modules/common/components/InputModal.vue';
+import AddIcon from '@/modules/common/icon/addIcon.vue';
+import { ref } from 'vue';
+const modalOpen = ref(false);
+</script>

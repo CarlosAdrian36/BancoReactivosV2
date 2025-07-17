@@ -84,13 +84,10 @@
           class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
         >
           <li>
-            <a class="justify-between">
-              Profile
-              <span class="badge">New</span>
-            </a>
+            <a class="justify-between"> Perfil </a>
           </li>
-          <li><a>Settings</a></li>
-          <li><a>Logout</a></li>
+          <li><a>Configuracion</a></li>
+          <li><a>Cerrar Sesion</a></li>
         </ul>
       </div>
     </div>

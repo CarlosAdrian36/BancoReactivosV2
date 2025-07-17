@@ -12,6 +12,12 @@
               <button class="btn btn-circle btn-sm">
                 <DeleteIcon />
               </button>
+              <button class="btn btn-circle btn-sm">
+                <EditIcon />
+              </button>
+              <button class="btn btn-circle btn-sm">
+                <ConfigIcon />
+              </button>
             </div>
           </div>
         </div>
@@ -65,6 +71,8 @@ import CustomModal from '@/modules/common/components/CustomModal.vue';
 import DeleteIcon from '@/modules/common/icon/deleteIcon.vue';
 import { useBancoStore } from '@/modules/BancoElaborador/store/banco.store';
 import { RouterLink } from 'vue-router';
+import ConfigIcon from '@/modules/common/icon/configIcon.vue';
+import EditIcon from '@/modules/common/icon/editIcon.vue';
 
 const modalOpen = ref(false);
 
