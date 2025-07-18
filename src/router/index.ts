@@ -5,6 +5,7 @@ import ElaboradorList from '@/modules/BancoElaborador/views/elaboradorList.vue';
 import BancoLayout from '@/modules/Bancos/layout/BancoLayout.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 import ElaboradorCard from '@/modules/BancoElaborador/views/elaboradorCard.vue';
+import BancoTable from '@/modules/Bancos/views/BancoTable.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -47,6 +48,11 @@ const router = createRouter({
           path: '/Crearbanco',
           name: 'CrearBanco',
           component: ElaboradorCard,
+        },
+        {
+          path: '/t',
+          name: 't',
+          component: BancoTable,
         },
       ],
     },

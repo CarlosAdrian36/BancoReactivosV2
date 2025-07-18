@@ -1,0 +1,10 @@
+<template>
+  <footer class="footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4">
+    <aside>
+      <p>
+        Banco de Reactivos
+        <span> Copyright © {{ new Date().getFullYear() }} </span>
+      </p>
+    </aside>
+  </footer>
+</template>

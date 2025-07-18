@@ -23,7 +23,7 @@
           class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
         >
           <li>
-            <router-link to="Administrador">Banco Administardor</router-link>
+            <router-link to="Administrador">Banco Representante del CAD</router-link>
           </li>
           <li>
             <router-link to="/Revisor"> Bancos Revisor</router-link>
@@ -35,7 +35,19 @@
       </div>
     </div>
     <div class="navbar-center">
-      <a class="btn btn-ghost text-xl">Banco de Reactivos</a>
+      <svg
+        class="h-8 w-8 text-black"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <polygon
+          points="0,0.663 9.401,0.663 15.882,7.146 15.882,14.127 5.307,3.608 5.274,22.969 0,22.969"
+        />
+        <polygon
+          points="23.631,22.969 14.232,22.969 7.752,16.485 7.752,9.501 18.327,20.018 18.359,0.662 23.631,0.662"
+        />
+      </svg>
     </div>
     <div class="navbar-end">
       <label class="toggle text-base-content">

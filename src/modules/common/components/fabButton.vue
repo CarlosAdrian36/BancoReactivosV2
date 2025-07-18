@@ -1,5 +1,5 @@
 <template>
-  <button @click="$emit('click')" :class="['btn btn-circle fixed ', position]">
+  <button @click="$emit('click')" :class="['btn btn-circle  ', position, fix]">
     <slot />
   </button>
 </template>
@@ -7,10 +7,12 @@
 <script setup lang="ts">
 interface Props {
   position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+  fix?: 'fixed' | '';
 }
 
 withDefaults(defineProps<Props>(), {
   position: 'bottom-right',
+  fix: 'fixed',
 });
 
 defineEmits(['click']);

@@ -48,7 +48,9 @@
             </div>
           </td>
           <th>
-            <button class="btn btn-xs">Detalles</button>
+            <button class="btn btn-xs">
+              <RouterLink :to="`/t`"> Detalles </RouterLink>
+            </button>
           </th>
         </tr>
         <tr class="hover:bg-base-300">
@@ -151,5 +153,6 @@ import FabButton from '@/modules/common/components/fabButton.vue';
 import InputModal from '@/modules/common/components/InputModal.vue';
 import AddIcon from '@/modules/common/icon/addIcon.vue';
 import { ref } from 'vue';
+import { RouterLink } from 'vue-router';
 const modalOpen = ref(false);
 </script>

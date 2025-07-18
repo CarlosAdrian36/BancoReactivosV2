@@ -14,7 +14,6 @@
       </div>
     </div>
   </dialog>
-  s
 </template>
 
 <script lang="ts" setup>

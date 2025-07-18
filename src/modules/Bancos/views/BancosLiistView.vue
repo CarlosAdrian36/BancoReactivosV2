@@ -1,28 +1,44 @@
 <template>
+  <div class="bg-info h-60">asd</div>
   <div
     class="mx-auto grid max-w-2xl grid-cols-1 gap-5 p-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1"
   >
+    <!-- <div>
+      <form class="filter">
+        <input class="btn btn-square" type="reset" value="×" />
+        <input class="btn" type="radio" name="frameworks" aria-label="Terminado" />
+        <input class="btn" type="radio" name="frameworks" aria-label="Construccion" />
+        <input class="btn" type="radio" name="frameworks" aria-label="Revision" />
+      </form>
+    </div>
+    <span class="status status-accent"></span>
     <div v-for="banco in bancosStore.bancoList" :key="banco.bancoId" class="hover">
+      <div class="inline-grid *:[grid-area:1/1]">
+        <div class="status status-error animate-ping"></div>
+        <div class="status status-error"></div>
+      </div>
+      Revision
+
       <RouterLink :to="`/Administrado/${banco.bancoId}`">
         <div class="card bg-base-200 card-sm shadow-sm">
           <div class="card-body">
             <h2 class="card-title">{{ banco.titulo }}</h2>
             <p>{{ banco.esCompartido }}</p>
             <div class="justify-end card-actions">
-              <button class="btn btn-circle btn-sm">
+              <button @click.stop.prevent="CustomModalOpen = true" class="btn btn-circle btn-sm">
                 <DeleteIcon />
               </button>
-              <button class="btn btn-circle btn-sm">
+              <button @click.stop.prevent="saludar" class="btn btn-circle btn-ghost btn-sm">
                 <EditIcon />
               </button>
-              <button class="btn btn-circle btn-sm">
+              <button @click.stop.prevent="saludar" class="btn btn-circle btn-sm">
                 <ConfigIcon />
               </button>
             </div>
           </div>
         </div>
       </RouterLink>
-    </div>
+    </div> -->
   </div>
 
   <!-- Modal Customizable con su boton -->
@@ -43,9 +59,9 @@
     </template>
   </CustomModal>
 
-  <FabButton @click="CustomModalOpen = true" position="bottom-left">
+  <!-- <FabButton @click="CustomModalOpen = true" position="bottom-left" fix="fixed">
     <DeleteIcon />
-  </FabButton>
+  </FabButton> -->
 
   <!-- Modal con titulo y descripcion -->
   <InputModal
@@ -79,4 +95,8 @@ const modalOpen = ref(false);
 const CustomModalOpen = ref(false);
 
 const bancosStore = useBancoStore();
+
+function saludar() {
+  console.log('Hola desde Vue!');
+}
 </script>
