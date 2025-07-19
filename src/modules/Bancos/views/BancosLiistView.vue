@@ -9,7 +9,7 @@
     </div>
   </div>
 
-  <div class="flex flex-wrap gap-6 justify-center -mt-14 relative z-10 border-4">
+  <div class="flex flex-wrap gap-6 justify-center -mt-14 relative z-10 ">
     <!-- //Tarjetas con informacion -->
 
     <div class="card bg-base-200 w-80 h-44 shadow-sm">
@@ -47,7 +47,7 @@
     </div>
   </div>
   <!-- "//////////////////////////////////////////////////////////////////////////////////////////////////////////////////" -->
-  <div class="mx-26 border-4">
+  <div class="mx-26 ">
     <form class="filter">
       <input class="btn btn-square" type="reset" value="×" />
       <input class="btn" type="radio" name="frameworks" aria-label="Svelte" />
@@ -56,7 +56,7 @@
     </form>
   </div>
 
-  <div class="overflow-x-auto border-4 border-indigo-600">
+  <div class="overflow-x-auto  border-indigo-600">
     <table class="table">
       <!-- head -->
       <thead>
@@ -68,7 +68,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="hover:bg-base-300 border-4">
+        <tr class="hover:bg-base-300 ">
           <th>1</th>
           <td>
             <div class="break-words">
@@ -164,19 +164,19 @@
 </template>
 
 <script setup lang="ts">
-import FabButton from '@/modules/common/components/fabButton.vue';
-import AddIcon from '@/modules/common/icon/addIcon.vue';
+// import FabButton from '@/modules/common/components/fabButton.vue';
+// import AddIcon from '@/modules/common/icon/addIcon.vue';
 import InputModal from '@/modules/common/components/InputModal.vue';
 import { ref } from 'vue';
 import CustomModal from '@/modules/common/components/CustomModal.vue';
-import DeleteIcon from '@/modules/common/icon/deleteIcon.vue';
+// import DeleteIcon from '@/modules/common/icon/deleteIcon.vue';
 import { useBancoStore } from '@/modules/BancoElaborador/store/banco.store';
 import { RouterLink } from 'vue-router';
-import ConfigIcon from '@/modules/common/icon/configIcon.vue';
-import EditIcon from '@/modules/common/icon/editIcon.vue';
+// import ConfigIcon from '@/modules/common/icon/configIcon.vue';
+// import EditIcon from '@/modules/common/icon/editIcon.vue';
 import ValidadoIcon from '@/modules/common/icon/validadoIcon.vue';
 import WarnIcon from '@/modules/common/icon/warnIcon.vue';
-import ErrorIcon from '@/modules/common/icon/errorIcon.vue';
+// import ErrorIcon from '@/modules/common/icon/errorIcon.vue';
 
 const modalOpen = ref(false);
 
@@ -184,9 +184,9 @@ const CustomModalOpen = ref(false);
 
 const bancosStore = useBancoStore();
 
-function saludar() {
-  console.log('Hola desde Vue!');
-}
+// function saludar() {
+//   console.log('Hola desde Vue!');
+// }
 </script>
 <style scoped>
 .sin {
