@@ -1,13 +1,74 @@
 <template>
+  <!-- Titulo y boton de crear -->
+  <div class="bg-info-content min-h-60 relative text-base-content">
+    <BreadCrumbs />
+
+    <div class="text-base-content">
+      <div class="card w-full card-md shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title">
+            Muy lejos, más allá de las montañas de palabras, alejados de los países de las vocales y
+            las consonantes, viven los textos simulados. Viven aislados en casas de letras, en la
+            costa de la semántica, un gran océano de lenguas. Un riachuelo llamado Pons fluye por su
+            pueblo y los abastece con las normas necesarias. Hablamos de un país paraisomático en el
+            que a uno le caen pedazos de frases asadas en la boca. Ni siquiera los todopoderosos
+            signos de puntuación dominan a los textos simulados; una vida, se puede decir, poco
+            ortográfica. Pero un buen día, una pequeña línea de texto simulado, llamada Lorem Ipsum,
+            decidió aventurarse y salir al vasto mundo de la gramática. El gran Oxmox le
+            desanconsejó hacerlo, ya que esas tierras estaban llenas de comas malvadas, signos de
+            interrogación salvajes y puntos y coma traicioneros, pero el texto simulado no se dejó
+            atemorizar. Empacó sus siete versales, enfundó su inicial en el cinturón y se puso en
+            camino. Cuando ya había escalado las primeras colinas de las montañas cursivas, se dio
+            media vuelta para dirigir su mirada por última vez, hacia su ciudad natal Letralandia,
+            el encabezamiento del pueblo Alfabeto y el subtítulo de su
+          </h3>
+
+          <p>
+            Muy lejos, más allá de las montañas de palabras, alejados de los países de las vocales y
+            las consonantes, viven los textos simulados. Viven aislados en casas de letras, en la
+            costa de la semántica, un gran océano de lenguas. Un riachuelo llamado Pons fluye por su
+            pueblo y los abastece con las normas necesarias. Hablamos de un país paraisomático en el
+            que a uno le caen pedazos de frases asadas en la boca. Ni siquiera los todopoderosos
+            signos de puntuación dominan a los textos simulados; una vida, se puede decir, poco
+            ortográfica. Pero un buen día, una pequeña línea de texto simulado, llamada Lorem Ipsum,
+            decidió aventurarse y salir al vasto mundo de la gramática. El gran Oxmox le
+            desanconsejó hacerlo, ya que esas tierras estaban llenas de comas malvadas, signos de
+            interrogación salvajes y puntos y coma traicioneros, pero el texto simulado no se dejó
+            atemorizar. Empacó sus siete versales, enfundó su inicial en el cinturón y se puso en
+            camino. Cuando ya había escalado las primeras colinas de las montañas cursivas, se dio
+            media vuelta para dirigir su mirada por última vez, hacia su ciudad natal Letralandia,
+            el encabezamiento del pueblo Alfabeto y el subtítulo de su propia calle, la calle del
+            renglón. Una pregunta retórica se le pasó por la mente y le puso melancólico, pero
+            enseguida reemprendió su marcha. De nuevo en camino, se encontró con una copia. La copia
+            advirtió al pequeño texto simulado de que en el lugar del que ella venía, la habían
+            reescrito miles de veces y que todo lo que había quedado de su original era la palabra
+            "y", así que más le valía al pequeño texto simulado volver a su país, donde estaría
+            mucho más seguro. Pero nada de lo dicho por la copia pudo convencerlo, de manera que al
+            cabo de poco tiempo, unos pérfidos redactores publicitarios lo encontraron y
+            emborracharon con Longe y Parole para llevárselo después a su agencia, donde abusaron de
+            él para sus proyectos, una y otra vez. Y si aún no lo han reescrito, lo siguen
+            utilizando hasta ahora.Muy lejos, más allá de las montañas de palabras, alejados de los
+            países de las vocales y las consonantes, viven los textos simulados. Viven aislados en
+            casas de letras, en la costa de la semántica, un gran océano de lenguas. Un riachuelo
+            llamado Pons fluye por su pueblo y los abastece con las normas
+          </p>
+          <div class="mt-6 items-center text-center">
+            <button class="btn btn-primary">Agregar Reactivo al banco</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <p class="underline underline-offset-4">Etapa + Nivel Cognitivo + Clasificación. ????</p>
 
-  <BreadCrumbs />
   <div class="">
     <table class="table">
       <!-- head -->
       <thead>
         <tr>
           <th></th>
+          <th>Etapa</th>
+          <th>Nivel Cognitivo</th>
           <th>Reactivo</th>
           <th>Estatus</th>
           <th></th>
@@ -17,118 +78,41 @@
         <!-- row 1 -->
         <tr class="hover:bg-base-300">
           <th>1</th>
+          <td>E2</td>
+          <td>Memorizado</td>
           <td>
-            <div class="break-words">Este es un Reactivo 1</div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime animi minus, nostrum
+            vitae officiis distinctio tempore laborum ipsa, aliquid non similique esse unde
+            perspiciatis veritatis labore voluptas eos veniam id?
           </td>
           <td>
             <div class="badge badge-success">
-              <svg class="size-[1em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <g fill="currentColor" stroke-linejoin="miter" stroke-linecap="butt">
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="square"
-                    stroke-miterlimit="10"
-                    stroke-width="2"
-                  ></circle>
-                  <polyline
-                    points="7 13 10 16 17 8"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="square"
-                    stroke-miterlimit="10"
-                    stroke-width="2"
-                  ></polyline>
-                </g>
-              </svg>
+              <ValidadoIcon />
               Validado
             </div>
           </td>
-          <th>
-            <button class="btn btn-xs">
-              <RouterLink :to="`/t`"> Detalles </RouterLink>
-            </button>
-          </th>
+          <td>
+            <RouterLink class="btn btn-xs" :to="`/t`"> Detalles </RouterLink>
+          </td>
         </tr>
-        <tr class="hover:bg-base-300">
-          <th>2</th>
-          <td>
-            <div class="break-words">Este es un Reactivo 2</div>
-          </td>
-          <td>
-            <div class="badge badge-warning">
-              <svg class="size-[1em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-                <g fill="currentColor">
-                  <path
-                    d="M7.638,3.495L2.213,12.891c-.605,1.048,.151,2.359,1.362,2.359H14.425c1.211,0,1.967-1.31,1.362-2.359L10.362,3.495c-.605-1.048-2.119-1.048-2.724,0Z"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                  ></path>
-                  <line
-                    x1="9"
-                    y1="6.5"
-                    x2="9"
-                    y2="10"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                  ></line>
-                  <path
-                    d="M9,13.569c-.552,0-1-.449-1-1s.448-1,1-1,1,.449,1,1-.448,1-1,1Z"
-                    fill="currentColor"
-                    data-stroke="none"
-                    stroke="none"
-                  ></path>
-                </g>
-              </svg>
-
-              Nuevo
-            </div>
-          </td>
-          <th>
-            <button class="btn btn-xs">Detalles</button>
-          </th>
-        </tr>
-        <tr class="hover:bg-base-300">
-          <th>3</th>
-          <td>
-            <div class="break-words">Este es un Reactivo 3</div>
-          </td>
-          <td>
-            <div class="badge badge-error">
-              <svg class="size-[1em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <g fill="currentColor">
-                  <rect
-                    x="1.972"
-                    y="11"
-                    width="20.056"
-                    height="2"
-                    transform="translate(-4.971 12) rotate(-45)"
-                    fill="currentColor"
-                    stroke-width="0"
-                  ></rect>
-                  <path
-                    d="m12,23c-6.065,0-11-4.935-11-11S5.935,1,12,1s11,4.935,11,11-4.935,11-11,11Zm0-20C7.038,3,3,7.037,3,12s4.038,9,9,9,9-4.037,9-9S16.962,3,12,3Z"
-                    stroke-width="0"
-                    fill="currentColor"
-                  ></path>
-                </g>
-              </svg>
-              Rediseño
-            </div>
-          </td>
-          <th>
-            <button class="btn btn-xs">Detalles</button>
-          </th>
-        </tr>
+        <!-- <th></th>
+        <td>E3</td>
+        <td>Memorizado</td>
+        <th>1</th>
+        <td>
+          <div class="break-words">Este es un Reactivo 1</div>
+        </td>
+        <td>
+          <div class="badge badge-success">
+            <ValidadoIcon/>
+            Validado
+          </div>
+        </td>
+        <th>
+          <button class="btn btn-xs">
+            <RouterLink :to="`/t`"> Detalles </RouterLink>
+          </button>
+        </th> -->
       </tbody>
     </table>
   </div>
@@ -152,6 +136,7 @@ import BreadCrumbs from '@/modules/common/components/BreadCrumbs.vue';
 import FabButton from '@/modules/common/components/fabButton.vue';
 import InputModal from '@/modules/common/components/InputModal.vue';
 import AddIcon from '@/modules/common/icon/addIcon.vue';
+import ValidadoIcon from '@/modules/common/icon/validadoIcon.vue';
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
 const modalOpen = ref(false);

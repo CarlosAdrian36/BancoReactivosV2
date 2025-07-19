@@ -4,9 +4,11 @@ import TopMenu from '@/modules/common/components/TopMenu.vue';
 </script>
 
 <template>
-  <div class="">
-    <TopMenu />
-    <main class="">
+  <div class="flex flex-col min-h-screen">
+    <div class="" >
+      <TopMenu />
+    </div>
+    <main class="flex-grow">
       <router-view />
     </main>
     <footer>

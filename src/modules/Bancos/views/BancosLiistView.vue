@@ -1,4 +1,6 @@
 <template class="sin">
+
+
   <!-- Titulo y boton de crear -->
   <div class="bg-info-content h-60 flex items-center rounded-b-xl relative">
     <div class="flex flex-col sm:flex-row justify-between p-5 w-full">
@@ -9,12 +11,13 @@
     </div>
   </div>
 
+  <!-- "-------------------------------------------------------------  TARJETAS DE INFORNACION ------------------------------------------------------------" -->
+
   <div class="flex flex-wrap gap-6 justify-center -mt-14 relative z-10 ">
-    <!-- //Tarjetas con informacion -->
 
     <div class="card bg-base-200 w-80 h-44 shadow-sm">
       <div class="card-body">
-        <div class="stats shadow bg-base-100">
+        <div class="stats shadow bg-base-100">  
           <div class="stat">
             <div class="stat-title">Bancos</div>
             <div class="stat-value">86</div>
@@ -46,17 +49,40 @@
       </div>
     </div>
   </div>
-  <!-- "//////////////////////////////////////////////////////////////////////////////////////////////////////////////////" -->
-  <div class="mx-26 ">
+  <!-- "------------------------------------------------------------- FILTROS  ------------------------------------------------------------" -->
+
+
+
+  <!-- asdasdasdas -->
+  <div class="flex flex-row justify-center mt-10  ">
     <form class="filter">
       <input class="btn btn-square" type="reset" value="×" />
-      <input class="btn" type="radio" name="frameworks" aria-label="Svelte" />
-      <input class="btn" type="radio" name="frameworks" aria-label="Vue" />
-      <input class="btn" type="radio" name="frameworks" aria-label="React" />
+      <input class="btn" type="radio" name="frameworks" aria-label="Terminado" />
+      <input class="btn" type="radio" name="frameworks" aria-label="Construccion" />
     </form>
+      <!-- Busqueda -->
+    <div  class="ml-10  ">
+      <label class="input w-full">
+        <svg class="h-[2em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <g
+          stroke-linejoin="round"
+          stroke-linecap="round"
+          stroke-width="2.5"
+          fill="none"
+          stroke="currentColor"
+          >
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.3-4.3"></path>
+        </g>
+      </svg>
+      <input ref="searchInput"  type="search" class="grow" placeholder="Search" />
+      <kbd class="kbd kbd-sm">Ctrl</kbd>+
+      <kbd class="kbd kbd-sm">K</kbd>
+    </label>
   </div>
-
-  <div class="overflow-x-auto  border-indigo-600">
+</div>
+  <!-- "------------------------------------------------------------- TABLA ------------------------------------------------------------" -->
+  <div class="overflow-x-auto  p-5">
     <table class="table">
       <!-- head -->
       <thead>
@@ -87,9 +113,9 @@
             </div>
           </td>
           <th>
-            <button class="btn btn-xs">
-              <RouterLink :to="`/t`"> Detalles </RouterLink>
-            </button>
+
+              <RouterLink class="btn btn-xs" :to="`BancoDetalle`"> Detalles </RouterLink>
+
           </th>
         </tr>
         <tr class="hover:bg-base-300">
@@ -125,6 +151,7 @@
       </tbody>
     </table>
   </div>
+  <!-- "------------------------------------------------------------- MODALES PERSONALIZADO  ------------------------------------------------------------" -->
 
   <!-- Modal Customizable con su boton -->
   <CustomModal :open="CustomModalOpen">
@@ -167,7 +194,7 @@
 // import FabButton from '@/modules/common/components/fabButton.vue';
 // import AddIcon from '@/modules/common/icon/addIcon.vue';
 import InputModal from '@/modules/common/components/InputModal.vue';
-import { ref } from 'vue';
+import { onBeforeUnmount, onMounted, ref } from 'vue';
 import CustomModal from '@/modules/common/components/CustomModal.vue';
 // import DeleteIcon from '@/modules/common/icon/deleteIcon.vue';
 import { useBancoStore } from '@/modules/BancoElaborador/store/banco.store';
@@ -180,13 +207,33 @@ import WarnIcon from '@/modules/common/icon/warnIcon.vue';
 
 const modalOpen = ref(false);
 
-const CustomModalOpen = ref(false);
+const CustomModalOpen = ref (false);
 
 const bancosStore = useBancoStore();
 
-// function saludar() {
-//   console.log('Hola desde Vue!');
-// }
+
+
+
+const searchInput = ref< HTMLInputElement | null>(null);
+
+const handleKeydown = (e: KeyboardEvent) => {
+  if (e.ctrlKey && e.key === 'k') {
+    e.preventDefault(); // Evita abrir búsqueda del navegador
+    if (searchInput.value) {
+      searchInput.value.focus();
+}
+  }
+};
+
+onMounted(() => {
+  window.addEventListener('keydown', handleKeydown);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('keydown', handleKeydown);
+});
+
+
 </script>
 <style scoped>
 .sin {

@@ -5,7 +5,8 @@ import ElaboradorList from '@/modules/BancoElaborador/views/elaboradorList.vue';
 import BancoLayout from '@/modules/Bancos/layout/BancoLayout.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 import ElaboradorCard from '@/modules/BancoElaborador/views/elaboradorCard.vue';
-import BancoTable from '@/modules/Bancos/views/BancoTable.vue';
+// import BancoTable from '@/modules/Bancos/views/BancoTable.vue';
+import BancoDetalle from '@/modules/Bancos/views/bancoDetalle.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,19 +21,25 @@ const router = createRouter({
           path: 'Administrador',
           name: 'Administrador',
           component: () => import('@/modules/Bancos/views/BancosLiistView.vue'),
-          // children: [
-          //   {
-          //     path: 'bancos/card',
-          //     name: 'card',
-          //     component: () => import('@/modules/Bancos/views/BancoCard.vue'),
-          //   },
-          // ],
+          children: [
+            {
+              path: 'bancos/card',
+              name: 'card',
+              component: () => import('@/modules/Bancos/views/BancoCard.vue'),
+            },
+
+          ],
         },
         {
           path: 'Administrado/:bancoId',
           name: 'Administrado',
           // props: true,
           component: () => import('@/modules/Bancos/views/bancoDetalle.vue'),
+        },
+                            {
+          path: 'BancoDetalle',
+          name: 'BancoDetalle',
+          component: BancoDetalle,
         },
         {
           path: '/Revisor',
@@ -49,11 +56,7 @@ const router = createRouter({
           name: 'CrearBanco',
           component: ElaboradorCard,
         },
-        {
-          path: '/t',
-          name: 't',
-          component: BancoTable,
-        },
+
       ],
     },
 

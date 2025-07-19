@@ -50,7 +50,7 @@
         />
       </svg>
     </div>
-    <div class="navbar-end">
+    <div class="navbar-end p-5">
       <label class="toggle text-base-content">
         <input type="checkbox" value="dark" class="theme-controller" />
 

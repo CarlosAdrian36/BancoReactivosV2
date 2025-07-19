@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4">
+  <footer class="footer sm:footer-horizontal footer-start bg-base-300 text-base-content p-4">
     <aside>
       <p>
         Banco de Reactivos
