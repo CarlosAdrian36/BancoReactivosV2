@@ -1,5 +1,5 @@
 <template>
-  <div class="breadcrumbs text-sm">
+  <div class="breadcrumbs text-lg">
     <ul>
       <li>
         <RouterLink to="/Administrador">
@@ -19,7 +19,7 @@
           Inicio
         </RouterLink>
       </li>
-      <li>
+      <!-- <li>
         <span class="inline-flex items-center gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@
           </svg>
           Add Document
         </span>
-      </li>
+      </li> -->
     </ul>
   </div>
 </template>
