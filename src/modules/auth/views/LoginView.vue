@@ -33,6 +33,6 @@
       <RouterLink class="link" to="recuperar"> ¿Olvidaste la contraseña? </RouterLink>
     </div>
 
-    <button class="btn btn-block">Ingresar</button>
+    <button class="btn btn-neutral btn-block">Ingresar</button>
   </form>
 </template>

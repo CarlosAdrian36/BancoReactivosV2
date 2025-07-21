@@ -8,7 +8,7 @@
       <div class="card-body">
         <div class="card-actions justify-end">
           <button class="btn btn-square btn-sm">
-            <ConfigIcon />
+            <ConfigIcon @click="modalOpen = true" />
           </button>
         </div>
         <h2 class="card-title">
@@ -41,7 +41,7 @@
   </div>
   <!-- ----------------------------------------------------TABLA DE REACTIVOS--------------------------------------------------------- -->
   <div class="mt-6 items-center text-center">
-    <button class="btn btn-primary">Argegar Reactivo</button>
+    <button class="btn btn-dash btn-primary">Argegar Reactivo</button>
   </div>
 
   <div class="p-4">
@@ -80,25 +80,12 @@
     </table>
   </div>
 
-  <!-- Modal con titulo y descripcion -->
-  <InputModal
-    placeholder="Ingrese el Nuevo reactivo"
-    Titulo="Nuevo Banco"
-    descripcion=""
-    :open="modalOpen"
-    @close="modalOpen = false"
-  />
-  <!-- @value="bancosStore.addBanco" -->
-
-  <FabButton @click="modalOpen = true">
-    <AddIcon />
-  </FabButton>
+  <!-- ----------------------------------------- Modal Dialog Nuevo------------------------------------------------ -->
+  <ModalCustom :open="modalOpen" />
 </template>
 <script setup lang="ts">
 import BreadCrumbs from '@/modules/common/components/BreadCrumbs.vue';
-import FabButton from '@/modules/common/components/fabButton.vue';
-import InputModal from '@/modules/common/components/InputModal.vue';
-import AddIcon from '@/modules/common/icon/addIcon.vue';
+import ModalCustom from '@/modules/common/components/ModalCustom.vue';
 import ConfigIcon from '@/modules/common/icon/configIcon.vue';
 import ValidadoIcon from '@/modules/common/icon/validadoIcon.vue';
 import { ref } from 'vue';
