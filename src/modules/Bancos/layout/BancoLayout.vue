@@ -5,10 +5,10 @@ import TopMenu from '@/modules/common/components/TopMenu.vue';
 
 <template>
   <div class="flex flex-col min-h-screen">
-    <div class="" >
+    <div class="fixed top-0 left-0 w-full z-50">
       <TopMenu />
     </div>
-    <main class="flex-grow">
+    <main class="flex-grow pt-16 pb-6">
       <router-view />
     </main>
     <footer>

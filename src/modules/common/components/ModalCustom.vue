@@ -1,6 +1,6 @@
 <template>
   <dialog class="modal" :open="open">
-    <div class="modal-box h-[620px] max-h-[90vh] overflow-y-auto">
+    <div class="modal-box h-[620px] max-h-[80vh] max-w-5xl overflow-y-auto">
       <!-- Aqui van los tabs con contenido -->
       <div class="tabs tabs-lift">
         <label class="tab">
@@ -118,6 +118,12 @@ const availableUsers = ref<User[]>([
   { id: 1, name: 'Carlos Arroyo' },
   { id: 2, name: 'Ana Pérez' },
   { id: 3, name: 'Luis Gómez' },
+  { id: 4, name: 'Luis Gómez' },
+  { id: 5, name: 'Luis Gómez' },
+  { id: 6, name: 'Luis Gómez' },
+  { id: 7, name: 'Luis Gómez' },
+  { id: 8, name: 'Luis Gómez' },
+  { id: 9, name: 'Luis Gómez' },
 ]);
 
 const assignedUsers = ref<User[]>([]);
