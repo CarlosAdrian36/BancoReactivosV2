@@ -182,12 +182,11 @@
   </div>
 
   <!-- ----------------------------------------- Modal Dialog Nuevo------------------------------------------------ -->
-  <ModalCustom :open="modalOpen" />
 </template>
 <script setup lang="ts">
 import BreadCrumbs from '@/modules/common/components/BreadCrumbs.vue';
 import ModalCustom from '@/modules/common/components/ModalCustom.vue';
-import ConfigIcon from '@/modules/common/icon/configIcon.vue';
+// import ConfigIcon from '@/modules/common/icon/configIcon.vue';
 import EditIcon from '@/modules/common/icon/editIcon.vue';
 import MembersIcon from '@/modules/common/icon/membersIcon.vue';
 import ValidadoIcon from '@/modules/common/icon/validadoIcon.vue';
