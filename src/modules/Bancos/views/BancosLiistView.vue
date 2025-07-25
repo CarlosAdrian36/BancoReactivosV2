@@ -150,43 +150,6 @@
       </tbody>
     </table>
   </div>
-  <!-- "------------------------------------------------------------- MODALES PERSONALIZADO  ------------------------------------------------------------" -->
-
-  <!-- Modal Customizable con su boton -->
-  <!-- <CustomModal :open="CustomModalOpen">
-    <template #header>
-      <h1>Eliminacion de banco</h1>
-    </template>
-
-    <template #body>
-      <p>Se eliminara el banco con nombre: Bancos que no sirve</p>
-    </template>
-
-    <template #action>
-      <div class="flex justify-end mx-5">
-        <button @click="CustomModalOpen = false" class="btn mr-4">Close</button>
-        <button type="submit" class="btn btn-primary">Aceptar</button>
-      </div>
-    </template>
-  </CustomModal> -->
-
-  <!-- <FabButton @click="CustomModalOpen = true" position="bottom-left" fix="fixed">
-    <DeleteIcon />
-  </FabButton> -->
-
-  <!-- Modal con titulo y descripcion -->
-  <!-- <InputModal
-    placeholder="Ingrese el nombre del banco"
-    Titulo="Nuevo Banco"
-    descripcion=""
-    :open="modalOpen"
-    @close="modalOpen = false"
-    @value="bancosStore.addBanco"
-  /> -->
-
-  <!-- <FabButton @click="modalOpen = true">
-    <AddIcon />
-  </FabButton> -->
 </template>
 
 <script setup lang="ts">

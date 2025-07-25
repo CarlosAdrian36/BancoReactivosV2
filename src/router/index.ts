@@ -7,6 +7,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import ElaboradorCard from '@/modules/BancoElaborador/views/elaboradorCard.vue';
 // import BancoTable from '@/modules/Bancos/views/BancoTable.vue';
 import BancoDetalle from '@/modules/Bancos/views/bancoDetalle.vue';
+import DetalleReactivo from '@/modules/Bancos/views/DetalleReactivo.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,7 +28,6 @@ const router = createRouter({
               name: 'card',
               component: () => import('@/modules/Bancos/views/BancoCard.vue'),
             },
-
           ],
         },
         {
@@ -36,7 +36,7 @@ const router = createRouter({
           // props: true,
           component: () => import('@/modules/Bancos/views/bancoDetalle.vue'),
         },
-                            {
+        {
           path: 'BancoDetalle',
           name: 'BancoDetalle',
           component: BancoDetalle,
@@ -56,7 +56,11 @@ const router = createRouter({
           name: 'CrearBanco',
           component: ElaboradorCard,
         },
-
+        {
+          path: '/DetaleReactivo',
+          name: 'DetaleReactivo',
+          component: DetalleReactivo,
+        },
       ],
     },
 
