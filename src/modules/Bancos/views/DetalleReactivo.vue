@@ -3,7 +3,7 @@ import SendIcon from '@/modules/common/icon/sendIcon.vue';
 </script>
 
 <template>
-  <div class="flex flex-row border-2 h-full">
+  <div class="flex flex-row border-2">
     <!-- Columna para Reactivo y Respuesta -->
     <div class="flex-3/12 p-5">
       <div class="card bg-base-100 shadow-xl/30">
@@ -87,22 +87,25 @@ import SendIcon from '@/modules/common/icon/sendIcon.vue';
         </div>
       </div>
     </div>
+    <!-- Divider -->
+    <div class="divider divider-horizontal"></div>
     <!-- Observaciones y comentarios  -->
-    <div class="divider divider-horizontal h-full"></div>
-    <div class="flex-1 p-5">
+    <div class="flex-1 p-5 items-end">
       <!-- Aqui esta el chat -->
-      <div class="card bg-base-100 card-xs shadow-xl/30">
+      <div class="card bg-base-100 card-md min-h-[450px] shadow-xl/30">
         <div class="card-body">
           <h2 class="card-title justify-center">Comentarios</h2>
           <div class="divider"></div>
-          <div class="chat chat-start">
-            <div class="chat-header">Obi-Wan Kenobi</div>
-            <div class="chat-bubble">You were the Chosen One!</div>
-          </div>
-          <div class="chat chat-start">
+
+          <div class="chat chat-end">
             <div class="chat-header">Obi-Wan Kenobi</div>
             <div class="chat-bubble">I loved you.</div>
           </div>
+          <div class="chat chat-end">
+            <div class="chat-header">Obi-Wan Kenobi</div>
+            <div class="chat-bubble">I loved you.</div>
+          </div>
+
           <div class="">
             <div
               class="flex items-center rounded-full px-4 py-2 mx-auto bg-base-200 text-base-content shadow border border-black focus-within:border-blue-500 transition"
@@ -124,4 +127,3 @@ import SendIcon from '@/modules/common/icon/sendIcon.vue';
     </div>
   </div>
 </template>
-z
