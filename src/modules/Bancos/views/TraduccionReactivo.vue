@@ -18,11 +18,7 @@
             <th>1</th>
             <td>E2</td>
             <td>Memorizado</td>
-            <td>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime animi minus, nostrum
-              vitae officiis distinctio tempore laborum ipsa, aliquid non similique esse unde
-              perspiciatis veritatis labore voluptas eos veniam id?
-            </td>
+            <td>Aqui traduce de paso a paso</td>
             <td>
               <div class="badge badge-success">
                 <ValidadoIcon />
@@ -37,11 +33,7 @@
             <th>1</th>
             <td>E2</td>
             <td>Memorizado</td>
-            <td>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime animi minus, nostrum
-              vitae officiis distinctio tempore laborum ipsa, aliquid non similique esse unde
-              perspiciatis veritatis labore voluptas eos veniam id?
-            </td>
+            <td>Aqui va a traducir y guardar lo que vaya terminando</td>
             <td>
               <div class="badge badge-success">
                 <ValidadoIcon />

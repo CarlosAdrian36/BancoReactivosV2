@@ -120,7 +120,7 @@
         <tr class="hover:bg-base-300">
           <th>2</th>
           <td>
-            <div class="break-words">Este es un Reactivo 2</div>
+            <div class="break-words">Traduccion</div>
           </td>
           <td>
             <div class="badge badge-warning">
