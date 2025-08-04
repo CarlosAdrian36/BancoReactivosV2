@@ -129,7 +129,7 @@
             </div>
           </td>
           <th>
-            <button class="btn btn-xs">Detalles</button>
+            <RouterLink class="btn btn-xs" :to="`DetalleTraductor`">Detalles</RouterLink>
           </th>
         </tr>
         <tr class="hover:bg-base-300">

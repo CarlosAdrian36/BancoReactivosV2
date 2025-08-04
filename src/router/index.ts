@@ -8,6 +8,9 @@ import ElaboradorCard from '@/modules/BancoElaborador/views/elaboradorCard.vue';
 // import BancoTable from '@/modules/Bancos/views/BancoTable.vue';
 import BancoDetalle from '@/modules/Bancos/views/bancoDetalle.vue';
 import DetalleReactivo from '@/modules/Bancos/views/DetalleReactivo.vue';
+import TraduccionReactivo from '@/modules/Bancos/views/TraduccionReactivo.vue';
+import TraduccionDetalle from '@/modules/Bancos/views/TraduccionDetalle.vue';
+import TraaduccionReactivoCompleto from '@/modules/Bancos/views/TraaduccionReactivoCompleto.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -60,6 +63,21 @@ const router = createRouter({
           path: '/DetaleReactivo',
           name: 'DetaleReactivo',
           component: DetalleReactivo,
+        },
+        {
+          path: '/DetalleTraductor',
+          name: 'DetalleTraductor',
+          component: TraduccionReactivo,
+        },
+        {
+          path: '/TraduccionDetalle',
+          name: 'TraduccionDetalle',
+          component: TraduccionDetalle,
+        },
+        {
+          path: '/NuevaEdicion',
+          name: 'NuevaEdicion',
+          component: TraaduccionReactivoCompleto,
         },
       ],
     },

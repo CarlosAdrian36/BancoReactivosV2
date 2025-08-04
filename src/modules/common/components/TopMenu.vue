@@ -35,7 +35,7 @@
       </div>
     </div>
     <div class="navbar-center">
-      <svg
+      <!-- <svg
         class="h-8 w-8 text-black"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -48,7 +48,7 @@
         <polygon
           points="23.631,22.969 14.232,22.969 7.752,16.485 7.752,9.501 18.327,20.018 18.359,0.662 23.631,0.662"
         />
-      </svg>
+      </svg> -->
     </div>
     <div class="navbar-end p-5">
       <label class="toggle text-base-content">
