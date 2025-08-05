@@ -35,9 +35,9 @@
             <td>Memorizado</td>
             <td>Aqui va a traducir y guardar lo que vaya terminando</td>
             <td>
-              <div class="badge badge-success">
+              <div class="badge badge-warning">
                 <ValidadoIcon />
-                Validado
+                Construccion
               </div>
             </td>
             <td>
