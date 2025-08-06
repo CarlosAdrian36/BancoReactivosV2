@@ -8,7 +8,7 @@ import TopMenu from '@/modules/common/components/TopMenu.vue';
     <div class="fixed top-0 left-0 w-full z-50">
       <TopMenu />
     </div>
-    <main class="flex-grow pt-24 pb-6">
+    <main class="flex-grow pt-16 pb-6">
       <router-view />
     </main>
     <footer>
